@@ -37,6 +37,14 @@ crunch 6 8 -t ,@@^^%%
 cewl example.com -m 5 -w words.txt
 ```
 
+### [CUPP](https://github.com/Mebus/cupp)
+
+Generate passwords based on your knowledge of the victim \(names, dates...\)
+
+```text
+python3 cupp.py -h
+```
+
 ### [pydictor](https://github.com/LandGrey/pydictor)
 
 ### Wordlists
@@ -298,6 +306,7 @@ hydra -l <username> -P /path/to/passwords.txt -s 587 <IP> -S -v -V #Port 587 for
 
 ```bash
 #Use the NetBIOS name of the machine as domain
+crackmapexec mssql <IP> -d <Domain Name> -u usernames.txt -p passwords.txt
 hydra -L /root/Desktop/user.txt –P /root/Desktop/pass.txt <IP> mssql
 medusa -h <IP> –U /root/Desktop/user.txt –P /root/Desktop/pass.txt –M mssql
 nmap -p 1433 --script ms-sql-brute --script-args mssql.domain=DOMAIN,userdb=customuser.txt,passdb=custompass.txt,ms-sql-brute.brute-windows-accounts <host> #Use domain if needed. Be carefull with the number of password in the list, this could block accounts
@@ -330,11 +339,17 @@ patator vnc_login host=<IP> password=FILE0 0=/root/Desktop/pass.txt –t 1 –x
 nmap -sV --script pgsql-brute --script-args userdb=/var/usernames.txt,passdb=/var/passwords.txt -p 5432 <IP>
 ```
 
+### Winrm
+
+```bash
+crackmapexec winrm <IP> -d <Domain Name> -u usernames.txt -p passwords.txt
+```
+
 ## Local
 
 ### Online cracking databases
 
-* [http://hashtoolkit.com/reverse-hash?](http://hashtoolkit.com/reverse-hash?) \(MD5 & SHA1\)
+* [~~http://hashtoolkit.com/reverse-hash?~~](http://hashtoolkit.com/reverse-hash?) \(MD5 & SHA1\)
 * [https://www.onlinehashcrack.com/](https://www.onlinehashcrack.com/) \(Hashes, WPA2 captures, and archives MSOffice, ZIP, PDF...\)
 * [https://crackstation.net/](https://crackstation.net/) \(Hashes\)
 * [https://md5decrypt.net/](https://md5decrypt.net/) \(MD5\)
@@ -399,7 +414,7 @@ john jwt.john #It does not work with Kali-John
 
 ```bash
 Format:USUARIO:ID:HASH_LM:HASH_NT:::
-jhon --wordlist=/usr/share/wordlists/rockyou.txt --fomrat=NT file_NTLM.hashes
+jhon --wordlist=/usr/share/wordlists/rockyou.txt --format=NT file_NTLM.hashes
 hashcat -a 0 -m 1000 --username file_NTLM.hashes /usr/share/wordlists/rockyou.txt --potfile-path salida_NT.pot
 ```
 

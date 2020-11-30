@@ -96,13 +96,16 @@ openssl enc -aes256 -k <KEY> -d -in backup.tgz.enc -out b.tgz
 perf stat -x, -e instructions:u "ls"
 
 ##Find trick for HTB, find files from 2018-12-12 to 2018-12-14
-find / -newermt 2018-12-12 ! -newermt 2018-12-14 -type f -readable -ls 2>/dev/null
+find / -newermt 2018-12-12 ! -newermt 2018-12-14 -type f -readable -not -path "/proc/*" -not -path "/sys/*" -ls 2>/dev/null
 
 #Reconfigure timezone
 sudo dpkg-reconfigure tzdata
 
 #Search from wich package is a binary
 apt-file search /usr/bin/file #Needed: apt-get install apt-file
+
+#Protobuf decode https://www.ezequiel.tech/2020/08/leaking-google-cloud-projects.html
+echo "CIKUmMesGw==" | base64 -d | protoc --decode_raw
 ```
 
 ## Bash for Windows
