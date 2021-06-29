@@ -10,7 +10,9 @@ description: 'https://pentesterlab.com/'
 
 CBC is an encryption mode in which the message is split into blocks of X bytes length and each block is XORed with the previous encrypted block. The result is then encrypted.
 
-The following schema \(source: [Wikipedia](http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)\) explains this method:![CBC encryption](https://assets.pentesterlab.com/padding_oracle/CBC_encryption.png)
+The following schema \(source: [Wikipedia](http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)\) explains this method:
+
+![CBC encryption](https://assets.pentesterlab.com/padding_oracle/CBC_encryption.png)
 
 During the decryption, the reverse operation is used. The encrypted data is split in block of X bytes. Then the block is decrypted and XORed with the previous encrypted block to get the cleartext. The following schema \(source: [Wikipedia](http://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)\) highlights this behavior:
 
@@ -66,7 +68,9 @@ perl ./padBuster.pl http://10.10.181.45/index.php "Nl0OpaQYeGPMJeWSih2iiQ==" 8 -
 
 In **resume**, you can start decrypting the encrypted data by **guessing** the correct **values** that can be used to **create** all the **different paddings**. Then, the padding oracle attack will start **decrypting** bytes **from** the **end** to the start by **guessing** which will be the correct **value** that **creates a padding of 1, 2, 3, etc**.
 
-If we zoom in, we can see that the cleartext byte `C15` is just a XOR between the encrypted byte `E7` from the previous block, and byte `I15` which came out of the block decryption step:![CBC zoom in](https://assets.pentesterlab.com/padding_oracle/zoomin.png)
+If we zoom in, we can see that the cleartext byte `C15` is just a XOR between the encrypted byte `E7` from the previous block, and byte `I15` which came out of the block decryption step:
+
+![CBC zoom in](https://assets.pentesterlab.com/padding_oracle/zoomin.png)
 
 This is also valid for all other bytes:
 

