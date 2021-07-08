@@ -457,6 +457,10 @@
 * [BRA.I.NSMASHER Presentation](a.i.-exploiting/bra.i.nsmasher-presentation/README.md)
   * [Basic Captcha Breaker](a.i.-exploiting/bra.i.nsmasher-presentation/basic-captcha-breaker.md)
 
+## Courses and Certifications Reviews
+
+* [INE Courses and eLearnSecurity Certifications Reviews](courses-and-certifications-reviews/ine-courses-and-elearnsecurity-certifications-reviews.md)
+
 ## Cloud Security
 
 * [Cloud security review](cloud-security/cloud-security-review.md)

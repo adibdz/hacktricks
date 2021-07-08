@@ -57,7 +57,7 @@ You can find the office autosaved files in : `C:\Usuarios\\AppData\Roaming\Micro
 
 ## Shell Items
 
-A shell item is an item taht contains information about how to access another file.
+A shell item is an item that contains information about how to access another file.
 
 ### Recent Documents \(LNK\)
 
@@ -106,7 +106,7 @@ You can inspect the jumplists using [**JumplistExplorer**](https://ericzimmerman
 
 ### Shellbags
 
-[**Follow this link to learn what are the shellbags.**](interesting-windows-registry-keys.md#shellbags)\*\*\*\*
+[**Follow this link to learn what are the shellbags.**](interesting-windows-registry-keys.md#shellbags)
 
 ## Use of Windows USBs
 
@@ -130,7 +130,7 @@ The files in the folder WPDNSE are a copy of the original ones, then won't survi
 
 Check the file `C:\Windows\inf\setupapi.dev.log` to get the timestamps about when the USB connection was produced \(search for `Section start`\).
 
-![](../../../.gitbook/assets/image%20%28477%29%20%282%29%20%282%29%20%282%29%20%281%29.png)
+![](../../../.gitbook/assets/image%20%28477%29%20%282%29%20%282%29%20%282%29%20%282%29%20%281%29.png)
 
 ### USB Detective
 
@@ -355,7 +355,7 @@ The **Amcache.hve** file is a registry file that stores the information of execu
 
 **Amcache.hve** records the recent processes that were run and lists the path of the files that’s executed which can then be used to find the executed program. It also record the SHA1 of the program.
 
-You can parse this information with the tool [**Amcacheparser**](https://github.com/EricZimmerman/AmcacheParser)\*\*\*\*
+You can parse this information with the tool [**Amcacheparser**](https://github.com/EricZimmerman/AmcacheParser)
 
 ```bash
 AmcacheParser.exe -f C:\Users\student\Desktop\Amcache.hve --csv C:\Users\student\Desktop\srum
